@@ -1,0 +1,80 @@
+struct tree{
+	int value
+	treePos left
+	treePos right	
+}
+treePos root=NULL
+root = insert(root,value)
+
+1. if root==NULL
+alokacija
+root->value=value
+root->left=NULL
+root->right=NULL
+2. if value<root->value
+root->left = insert(root->left,value)
+3. 2. if value>root->value
+root->right = insert(root->right,value)
+
+return root-za kraj rekurzije
+
+brisanje:
+if root==NULL
+	return NULL
+isto ko 2 i 3 samo delete umisto insert
+root->left !=NULL i root-right !=NULL
+treePos temp =FindMin(root->right)
+root->value = temp->value
+root->right = Del(root->right,root->value)
+temp=root
+if(root->left==NULL)
+	root=root->right
+else
+	root=root->left
+free(temp)
+
+pretrazivanje:
+lagano isto ko do sad
+
+ispis:
+inorder: print(root->left
+	print(root->value)
+	print(root->right)
+
+preorder:print(root->left
+	print(root->right)
+	print(root->value)
+
+postorder: print(root->value)
+	print(root->left
+	print(root->right)
+
+po razinama
+
+ciscenje memorije:
+if root !=NULL
+	free Tree(root->left)
+	free Tree(root->right)
+	free(root)
+
+9. zad
+b)
+replace(treePos root)
+	if root=NULL
+		return 0
+	int prevVal=root->value
+	root->value=replace(root->left)+replace(root->right)
+	return root->value+prevVal
+c)
+srand
+
+
+
+
+
+
+
+
+
+
+
