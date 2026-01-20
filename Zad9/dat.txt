@@ -1,0 +1,4 @@
+Inorder nakon insert:
+11 15 19 27 41 43 44 60 64 87 
+Inorder nakon replace:
+0 396 111 0 70 0 341 0 60 124 

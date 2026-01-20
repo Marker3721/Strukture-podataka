@@ -1,0 +1,5 @@
+﻿  8.c
+C:\Users\PC\Desktop\Zad8\8.c(64,13): warning C4013: 'levelOrder' undefined; assuming extern returning int
+C:\Users\PC\Desktop\Zad8\8.c(100,13): warning C4047: 'return': 'tree *' differs in levels of indirection from 'int'
+8.obj : error LNK2019: unresolved external symbol levelOrder referenced in function main
+C:\Users\PC\Desktop\Zad8\x64\Debug\Zad8.exe : fatal error LNK1120: 1 unresolved externals
